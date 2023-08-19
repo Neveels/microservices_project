@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/authentication-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/authentication-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/item-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/item-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservices_project.iml" filepath="$PROJECT_DIR$/microservices_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shop-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/shop-service.main.iml" />
     </modules>
   </component>
 </project>
