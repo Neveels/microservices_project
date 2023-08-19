@@ -19,7 +19,7 @@ public class AuthConfig {
 
     @Bean
     public UserDetailsService userDetailsService(){
-        return new CustomUserDetailsService();
+        return new CustomUserDetailsService(null);
     }
 
 
