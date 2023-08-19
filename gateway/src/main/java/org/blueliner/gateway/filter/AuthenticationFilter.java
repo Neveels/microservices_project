@@ -1,5 +1,6 @@
 package org.blueliner.gateway.filter;
 
+import org.blueliner.gateway.service.JwtService;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.http.HttpHeaders;
@@ -10,20 +11,19 @@ import java.util.Objects;
 
 @Component
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
-    private final RestTemplate restTemplate;
     private final RouteValidator routeValidator;
+    private final JwtService jwtService;
 
-    public AuthenticationFilter(RestTemplate restTemplate, RouteValidator routeValidator) {
+    public AuthenticationFilter(RouteValidator routeValidator, JwtService jwtService) {
         super(Config.class);
-        this.restTemplate = restTemplate;
         this.routeValidator = routeValidator;
+        this.jwtService = jwtService;
     }
 
     @Override
     public GatewayFilter apply(Config config) {
         return (((exchange, chain) -> {
             if (routeValidator.isSecured.test(exchange.getRequest())) {
-                //TODO: token contains token or not
                 if (!exchange.getRequest().getHeaders().containsKey(HttpHeaders.AUTHORIZATION)) {
                     throw new RuntimeException("Missing auth header!");
                 }
@@ -33,8 +33,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                     token = token.substring(7);
                 }
                 try {
-                    String forObject = restTemplate.getForObject("http://authentication-service/auth/validate?token" + token, String.class);
-                    System.out.println(forObject);
+                    jwtService.validateToken(token);
                 } catch (Exception e) {
                     throw new RuntimeException("unauthorized access to application");
                 }
