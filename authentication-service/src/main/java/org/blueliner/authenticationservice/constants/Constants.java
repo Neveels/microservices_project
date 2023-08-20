@@ -27,4 +27,5 @@ public class Constants {
      public static final String PRODUCT_WITH_COLOR_NOT_FOUND ="Product with color: %s not found";
      public static final String PRODUCT_WITH_NAME_ALREADY_EXIST = "Product with name %s already exist";
      public static final String DELETE_PHOTO_MESSAGE = "You cannot delete default user photo";
+     
 }

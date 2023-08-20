@@ -23,4 +23,5 @@ public class UserServiceImpl implements UserService {
 
         log.info("food order persisted {}", persistedFoodOrder);
     }
+
 }

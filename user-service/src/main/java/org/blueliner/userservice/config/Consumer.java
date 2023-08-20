@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 public class Consumer {
 
     private static final String orderTopic = "${topic.name}";
-
     private final ObjectMapper objectMapper;
     private final UserService userService;
 

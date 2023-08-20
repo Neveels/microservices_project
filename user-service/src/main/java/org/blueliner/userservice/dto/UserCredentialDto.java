@@ -9,4 +9,5 @@ public class UserCredentialDto {
     private String name;
     private String email;
     private String password;
+
 }

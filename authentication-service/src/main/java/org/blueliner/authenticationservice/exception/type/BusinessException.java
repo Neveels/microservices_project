@@ -2,13 +2,8 @@ package org.blueliner.authenticationservice.exception.type;
 
 import org.springframework.http.HttpStatus;
 
-/**
- * @author Neevels
- * @version 1.0
- * @date 4/5/2023 3:08 PM
- */
 public class BusinessException extends RuntimeException {
-    private HttpStatus httpStatus;
+    private final HttpStatus httpStatus;
 
     public BusinessException(String message, HttpStatus httpStatus) {
         super(message);
@@ -18,4 +13,5 @@ public class BusinessException extends RuntimeException {
     public HttpStatus getHttpStatus() {
         return httpStatus;
     }
+
 }

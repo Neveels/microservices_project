@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.blueliner.authenticationservice.dto.RegisterRequest;
 import org.blueliner.authenticationservice.model.UserCredential;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -26,4 +25,5 @@ public class Producer {
         kafkaTemplate.send(orderTopic, userCredentialsAsMessage);
         log.info("food order produced {}", userCredentialsAsMessage);
     }
+
 }

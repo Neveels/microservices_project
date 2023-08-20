@@ -4,4 +4,5 @@ import org.blueliner.userservice.dto.UserCredentialDto;
 
 public interface UserService {
     void saveUserCredentials(UserCredentialDto userCredentialDto);
+
 }

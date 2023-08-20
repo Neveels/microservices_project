@@ -8,8 +8,6 @@ import org.blueliner.authenticationservice.dto.RegisterRequest;
 import org.blueliner.authenticationservice.service.AuthenticationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
