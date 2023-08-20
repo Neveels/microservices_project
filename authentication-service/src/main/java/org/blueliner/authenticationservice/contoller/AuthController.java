@@ -1,5 +1,6 @@
 package org.blueliner.authenticationservice.contoller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.blueliner.authenticationservice.dto.AuthenticationRequest;
 import org.blueliner.authenticationservice.dto.AuthenticationResponse;
@@ -20,7 +21,7 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> addNewUser(@RequestBody RegisterRequest registerRequest) {
+    public ResponseEntity<AuthenticationResponse> addNewUser(@RequestBody RegisterRequest registerRequest) throws JsonProcessingException {
         return ResponseEntity.ok(authenticationService.register(registerRequest));
     }
 

@@ -1,4 +1,4 @@
-package org.blueliner.authenticationservice.service;
+package org.blueliner.authenticationservice.utils;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
