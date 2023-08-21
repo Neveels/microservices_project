@@ -24,6 +24,7 @@ repositories {
 extra["springCloudVersion"] = "2022.0.4"
 
 dependencies {
+    implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.modelmapper:modelmapper:3.1.1")
     implementation("org.springframework.kafka:spring-kafka")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
