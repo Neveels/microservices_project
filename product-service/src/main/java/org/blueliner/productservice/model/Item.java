@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.stereotype.Service;
 
 @Entity
 @AllArgsConstructor
@@ -13,12 +12,13 @@ import org.springframework.stereotype.Service;
 @Getter
 @Setter
 @Builder
-public class Product {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Integer price;
     private Integer amount;
+    private Integer quantity;
 
 }

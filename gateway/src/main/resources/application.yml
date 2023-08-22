@@ -3,9 +3,5 @@ spring:
   application:
     name: gateway
 
-  client:
-    service-url:
-      defaultZone : http://localhost:8761/eureka/
-
   config:
     import: "optional:configserver:"

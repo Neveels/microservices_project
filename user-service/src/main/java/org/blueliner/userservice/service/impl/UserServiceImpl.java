@@ -20,7 +20,6 @@ public class UserServiceImpl implements UserService {
     public void saveUserCredentials(UserCredentialDto userCredentialDto) {
         User foodOrder = modelMapper.map(userCredentialDto, User.class);
         User persistedFoodOrder = userRepository.save(foodOrder);
-
         log.info("food order persisted {}", persistedFoodOrder);
     }
 

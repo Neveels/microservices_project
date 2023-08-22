@@ -32,7 +32,7 @@ public class KafkaConfig {
     @Bean
     public NewTopic topic() {
         return TopicBuilder
-                .name("t.food.order")
+                .name("t.user.cred")
                 .partitions(1)
                 .replicas(1)
                 .build();

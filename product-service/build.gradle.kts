@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     java
     id("org.springframework.boot") version "3.1.2"
@@ -26,6 +28,7 @@ extra["springCloudVersion"] = "2022.0.4"
 dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.modelmapper:modelmapper:3.1.1")
+    implementation("org.springframework.kafka:spring-kafka")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
