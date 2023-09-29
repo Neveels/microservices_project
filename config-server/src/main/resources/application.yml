@@ -4,8 +4,6 @@ spring:
       server:
         git:
           uri: D:\Java\app-config-server
-#          username: neevels@mail.ru
-#          password: byNevels0214
         default-label: master
   application:
     name: config-server
